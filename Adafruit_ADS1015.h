@@ -23,7 +23,20 @@
 #include "WProgram.h"
 #endif
 
-#include <Wire.h>
+#ifndef SDA_PORT
+#error "SDA_PORT not defined. Please define."
+#endif
+#ifndef SDA_PIN
+#error "SDA_PIN not defined. Please define."
+#endif
+#ifndef SCL_PORT
+#error "SCL_PORT not defined. Please define."
+#endif
+#ifndef SCL_PIN
+#error "SCL_PIN not defined. Please define."
+#endif
+#include <SoftWire.h>
+
 
 /*=========================================================================
     I2C ADDRESS/BITS
